@@ -1,0 +1,17 @@
+# Default owners
+* @kdaiops06
+
+# Terraform and platform
+/platform/** @kdaiops06
+/deployments/** @kdaiops06
+
+# Observability stack
+/observability/** @kdaiops06
+
+# Documentation and standards
+/docs/** @kdaiops06
+/architecture/** @kdaiops06
+/roadmap/** @kdaiops06
+
+# GitHub workflow and policy
+/.github/** @kdaiops06

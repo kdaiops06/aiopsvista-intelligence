@@ -1,0 +1,33 @@
+name: Docs Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "architecture/**"
+      - "roadmap/**"
+      - "README.md"
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  docs-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required docs exist
+        run: |
+          test -f README.md
+          test -f docs/ARCHITECTURE.md
+          test -f docs/EXECUTION_PLAN.md
+          test -f docs/TECH_STACK.md
+
+      - name: Verify architecture doc is non-empty
+        run: |
+          test -s docs/ARCHITECTURE.md

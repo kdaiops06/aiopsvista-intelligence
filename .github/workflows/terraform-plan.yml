@@ -1,0 +1,32 @@
+name: Terraform Plan
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "platform/**"
+      - "deployments/**"
+      - "**/*.tf"
+      - "**/*.tfvars"
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform init and plan (if root module exists)
+        run: |
+          if [ -f "main.tf" ]; then
+            terraform init -input=false
+            terraform plan -input=false -no-color
+          else
+            echo "No root Terraform module at repository root; skipping plan."
+          fi
