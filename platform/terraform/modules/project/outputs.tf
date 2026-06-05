@@ -12,3 +12,8 @@ output "enabled_apis" {
   description = "APIs enabled in the project."
   value       = [for svc in google_project_service.enabled : svc.service]
 }
+
+output "gke_node_service_account_email" {
+  description = "Email of the service account used by GKE nodes."
+  value       = google_service_account.gke_nodes.email
+}

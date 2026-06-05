@@ -65,7 +65,7 @@ variable "node_service_account" {
 variable "system_pool_machine_type" {
   description = "Machine type for system pool."
   type        = string
-  default     = "e2-standard-2"
+  default     = "e2-small"
 }
 
 variable "system_pool_min_nodes" {
@@ -83,7 +83,7 @@ variable "system_pool_max_nodes" {
 variable "application_pool_machine_type" {
   description = "Machine type for application pool."
   type        = string
-  default     = "e2-standard-4"
+  default     = "e2-medium"
 }
 
 variable "application_pool_min_nodes" {

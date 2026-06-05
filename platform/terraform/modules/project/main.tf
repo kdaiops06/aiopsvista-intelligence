@@ -5,6 +5,13 @@ resource "google_project" "this" {
 
   org_id    = var.org_id
   folder_id = var.folder_id
+  auto_create_network = false
+  labels = {
+    environment = "dev"
+    platform    = "aiopsvista"
+    managed_by  = "terraform"
+    cost_center = "demo"
+  }
 }
 
 resource "google_project_service" "enabled" {
@@ -13,4 +20,10 @@ resource "google_project_service" "enabled" {
   project            = google_project.this.project_id
   service            = each.value
   disable_on_destroy = false
+}
+
+resource "google_service_account" "gke_nodes" {
+  account_id   = "gke-nodes"
+  display_name = "GKE Node Service Account"
+  project      = google_project.this.project_id
 }

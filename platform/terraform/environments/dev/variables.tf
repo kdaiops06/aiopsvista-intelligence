@@ -1,13 +1,13 @@
 variable "project_id" {
   description = "Project ID for dev environment."
   type        = string
-  default     = "aiopsvista-dev"
+  default     = "aiopsvista-market-dev"
 }
 
 variable "project_name" {
   description = "Display name for the dev project."
   type        = string
-  default     = "AiOpsVista Dev"
+  default     = "AiOpsVista Market Dev"
 }
 
 variable "billing_account" {
@@ -39,10 +39,10 @@ variable "network_name" {
   default     = "aiopsvista-shared-vpc"
 }
 
-variable "node_service_account" {
-  description = "Node service account email for GKE pools."
-  type        = string
-}
+# variable "node_service_account" {
+#   description = "Node service account email for GKE pools."
+#   type        = string
+# }
 
 variable "master_authorized_networks" {
   description = "Authorized CIDR blocks for GKE control plane access."

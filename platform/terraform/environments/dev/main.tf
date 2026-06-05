@@ -52,8 +52,9 @@ module "gke" {
   pods_secondary_range_name     = "gke-pods-range"
   services_secondary_range_name = "gke-services-range"
   release_channel               = "REGULAR"
-  node_service_account          = var.node_service_account
-  master_authorized_networks    = var.master_authorized_networks
+  # node_service_account          = var.node_service_account
+  node_service_account       = module.project.gke_node_service_account_email
+  master_authorized_networks = var.master_authorized_networks
 
   depends_on = [module.cloud_nat]
 }
