@@ -1,0 +1,6 @@
+terraform {
+  backend "gcs" {
+    bucket = "aiopsvista-dev-tfstate"
+    prefix = "platform/dev"
+  }
+}
