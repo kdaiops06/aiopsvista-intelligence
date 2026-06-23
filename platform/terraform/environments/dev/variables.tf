@@ -150,3 +150,51 @@ variable "ai_finops_labels" {
     cost_center = "ai-finops"
   }
 }
+
+variable "ai_usage_collector_container_image" {
+  description = "Container image URI for the AI Usage Collector Cloud Run service."
+  type        = string
+  default     = ""
+}
+
+variable "ai_usage_collector_public_access" {
+  description = "Allow public invocation of the AI Usage Collector."
+  type        = bool
+  default     = false
+}
+
+variable "ai_usage_collector_cpu" {
+  description = "CPU limit for the AI Usage Collector Cloud Run service."
+  type        = string
+  default     = "1"
+}
+
+variable "ai_usage_collector_memory" {
+  description = "Memory limit for the AI Usage Collector Cloud Run service."
+  type        = string
+  default     = "512Mi"
+}
+
+variable "ai_usage_collector_request_timeout_seconds" {
+  description = "Request timeout in seconds for the AI Usage Collector Cloud Run service."
+  type        = number
+  default     = 300
+}
+
+variable "ai_usage_collector_concurrency" {
+  description = "Maximum request concurrency for the AI Usage Collector Cloud Run service."
+  type        = number
+  default     = 20
+}
+
+variable "ai_usage_collector_max_instance_count" {
+  description = "Maximum number of Cloud Run instances for the AI Usage Collector."
+  type        = number
+  default     = 1
+}
+
+variable "ai_usage_collector_default_batch_size" {
+  description = "Default batch size for generated AI usage records."
+  type        = number
+  default     = 3
+}
