@@ -1,0 +1,16 @@
+Cloud Run service details captured before teardown:
+
+- Service: ai-usage-collector
+- Region: us-central1
+- Image: us-central1-docker.pkg.dev/aiopsvista-market-dev/ai-usage-collector/ai-usage-collector:v1
+- Service Account: ai-usage-collector@aiopsvista-market-dev.iam.gserviceaccount.com
+- Min Instances: 0
+- Max Instances: 1
+- Concurrency: 20
+- Authentication: required
+- Public IAM binding: none
+- Environment variables:
+  - PROJECT_ID=aiopsvista-market-dev
+  - DATASET_ID=ai_finops
+  - TABLE_ID=ai_usage
+  - DEFAULT_BATCH_SIZE=3

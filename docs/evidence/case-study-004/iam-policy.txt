@@ -1,0 +1,11 @@
+Cloud Run IAM policy evidence captured before teardown:
+
+- No `allUsers` binding present
+- No unauthenticated invoker binding configured
+- Service is intentionally private and requires authenticated access
+
+Runtime access model:
+
+- Cloud Run runtime identity: ai-usage-collector@aiopsvista-market-dev.iam.gserviceaccount.com
+- BigQuery write permissions: limited to `ai_finops.ai_usage`
+- Artifact Registry reader access: granted to the Cloud Run service agent for image import

@@ -24,6 +24,8 @@ The roadmap is intentionally conservative. It prioritizes architectural learning
 
 ## Phase 1 — Mock Collector
 
+**Status:** Complete
+
 ### Objective
 
 Prove the ingestion path by generating sample usage events and inserting them into `ai_finops.ai_usage`.
@@ -49,6 +51,7 @@ Prove the ingestion path by generating sample usage events and inserting them in
 - Sample records are written to BigQuery
 - Required attribution and reliability fields are populated
 - The deployment is reproducible through Terraform
+- Case Study #004 is delivered and documented as complete
 
 ---
 
@@ -192,3 +195,5 @@ Each phase should be accepted only when:
 - the new provider or capability writes to the same schema,
 - the architecture remains Terraform-managed,
 - the incremental cost remains justified by the value delivered.
+
+Case Study #004 completed Phase 1 and establishes the collector baseline for future provider integrations and Case Study #005 analytics work.

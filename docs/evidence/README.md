@@ -7,6 +7,12 @@ This folder captures the deployment evidence for the AiOpsVista Landing Zone dev
 - [Deployment Summary](deployment-summary.md)
 - [Validation Checklist](validation-checklist.md)
 
+## Case Study Evidence
+
+- [Case Study #002 Evidence Package](case-study-002/README.md)
+- [Case Study #003 Evidence Package](case-study-003/README.md)
+- [Case Study #004 Evidence Package](case-study-004/README.md)
+
 ## Raw Evidence
 
 - [cluster-info.txt](cluster-info.txt)
@@ -30,3 +36,4 @@ This folder captures the deployment evidence for the AiOpsVista Landing Zone dev
 - The cluster is zonal in `us-central1-a`.
 - The environment uses a private GKE control plane, Shared VPC, Cloud NAT, and Workload Identity.
 - Managed Prometheus is enabled for cluster observability.
+- Case study evidence packages are maintained alongside the landing zone evidence so platform and AI FinOps handoffs stay traceable.

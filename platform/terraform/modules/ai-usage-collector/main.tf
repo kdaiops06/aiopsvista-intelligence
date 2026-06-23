@@ -45,6 +45,7 @@ resource "google_cloud_run_v2_service" "ai_usage_collector" {
   ingress  = "INGRESS_TRAFFIC_ALL"
 
   labels = var.labels
+  deletion_protection = false
 
   template {
     service_account = google_service_account.ai_usage_collector.email

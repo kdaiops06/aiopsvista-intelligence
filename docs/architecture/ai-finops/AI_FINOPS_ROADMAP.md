@@ -14,7 +14,7 @@ Phases are not time-boxed by calendar dates. Each phase is complete when its suc
 
 ## Phase 1 — Foundation
 
-**Status:** In Progress
+**Status:** Complete
 
 **Objective:**
 
@@ -32,6 +32,7 @@ Establish the BigQuery schema and dataset required to store normalized AI usage 
 - Create the BigQuery dataset and table.
 - Validate the table schema with test records.
 - Establish data governance labels and retention policy.
+- Deliver Case Study #003 as the completed AI FinOps data model foundation.
 
 **Success Criteria:**
 
@@ -39,6 +40,7 @@ Establish the BigQuery schema and dataset required to store normalized AI usage 
 - `ai_usage` table exists with the correct schema.
 - The table is queryable.
 - Architecture and data model are documented.
+- Case Study #003 is complete and serves as the storage foundation for Case Study #004.
 
 **Cost Impact:**
 
@@ -48,7 +50,7 @@ Near zero. BigQuery storage and ad hoc query costs at this data volume are negli
 
 ## Phase 2 — Usage Collection
 
-**Status:** Planned
+**Status:** Complete
 
 **Objective:**
 
@@ -60,6 +62,7 @@ Connect AI provider APIs and internal agent systems to the `ai_usage` table so t
 - Cloud Run (usage normalization and enrichment)
 - Provider-specific integrations (OpenAI, Gemini, Claude, GitHub Copilot)
 - Internal agent instrumentation
+- Mock AI Usage Collector delivery in Cloud Run and Terraform
 
 **Activities:**
 
@@ -73,6 +76,7 @@ Connect AI provider APIs and internal agent systems to the `ai_usage` table so t
 - Usage events from at least one provider land in the `ai_usage` table.
 - Record latency from event creation to BigQuery availability is measured.
 - Data quality is validated for required fields.
+- Case Study #004 is complete and demonstrates the collection path.
 
 **Cost Impact:**
 

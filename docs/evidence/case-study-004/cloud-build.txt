@@ -1,0 +1,11 @@
+Cloud Build evidence captured before teardown:
+
+- Successful Build ID: 959ccddd-5b5f-4438-ae38-ddd423793c02
+- Published Image: us-central1-docker.pkg.dev/aiopsvista-market-dev/ai-usage-collector/ai-usage-collector:v1
+- Image Digest: sha256:19dcfb3f657b616c7195af49f93de5e32754e235666e1998cf269b9f5e04b020
+- Outcome: build, publish, and promotion to Cloud Run completed successfully
+
+Troubleshooting history:
+
+- Source fetch error resolved by granting Cloud Build staging bucket access to the compute service account
+- Artifact Registry push error resolved by granting `roles/artifactregistry.writer`
