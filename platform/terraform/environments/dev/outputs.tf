@@ -42,3 +42,23 @@ output "ai_finops_table_id" {
   description = "BigQuery table ID for AI usage records."
   value       = module.bigquery_ai_finops.table_id
 }
+
+output "ai_usage_collector_service_name" {
+  description = "Cloud Run service name for the AI Usage Collector."
+  value       = module.ai_usage_collector.service_name
+}
+
+output "ai_usage_collector_service_url" {
+  description = "Cloud Run service URL for the AI Usage Collector."
+  value       = module.ai_usage_collector.service_url
+}
+
+output "ai_usage_collector_service_account_email" {
+  description = "Runtime service account email for the AI Usage Collector."
+  value       = module.ai_usage_collector.service_account_email
+}
+
+output "ai_usage_collector_artifact_registry_repository_url" {
+  description = "Artifact Registry URL for the AI Usage Collector image repository."
+  value       = module.ai_usage_collector.artifact_registry_repository_url
+}

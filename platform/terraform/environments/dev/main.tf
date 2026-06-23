@@ -9,6 +9,7 @@ locals {
     "billingbudgets.googleapis.com",
     "monitoring.googleapis.com",
     "bigquery.googleapis.com",
+    "run.googleapis.com",
   ]
 }
 
@@ -92,4 +93,23 @@ module "bigquery_ai_finops" {
   labels                     = var.ai_finops_labels
 
   depends_on = [module.project]
+}
+
+module "ai_usage_collector" {
+  source = "../../modules/ai-usage-collector"
+
+  project_id              = module.project.project_id
+  region                  = var.region
+  dataset_id              = module.bigquery_ai_finops.dataset_id
+  table_id                = module.bigquery_ai_finops.table_id
+  container_image         = var.ai_usage_collector_container_image
+  public_access           = var.ai_usage_collector_public_access
+  cpu                     = var.ai_usage_collector_cpu
+  memory                  = var.ai_usage_collector_memory
+  request_timeout_seconds = var.ai_usage_collector_request_timeout_seconds
+  concurrency             = var.ai_usage_collector_concurrency
+  max_instance_count      = var.ai_usage_collector_max_instance_count
+  default_batch_size      = var.ai_usage_collector_default_batch_size
+
+  depends_on = [module.bigquery_ai_finops]
 }

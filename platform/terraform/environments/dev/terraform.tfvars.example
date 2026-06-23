@@ -34,3 +34,12 @@ ai_finops_labels = {
   managed_by  = "terraform"
   cost_center = "ai-finops"
 }
+
+ai_usage_collector_container_image        = "us-central1-docker.pkg.dev/aiopsvista-market-dev/ai-usage-collector/ai-usage-collector:latest"
+ai_usage_collector_public_access          = false
+ai_usage_collector_cpu                    = "1"
+ai_usage_collector_memory                 = "512Mi"
+ai_usage_collector_request_timeout_seconds = 300
+ai_usage_collector_concurrency            = 20
+ai_usage_collector_max_instance_count      = 1
+ai_usage_collector_default_batch_size      = 3
