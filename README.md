@@ -79,6 +79,23 @@ This repository serves as:
 - AiOpsVista Consulting Showcase
 - Future Agent Operations Testbed
 
+## Delivery Progress
+
+The AiOpsVista case study series now follows this progression:
+
+Provision -> Govern -> Observe -> Collect -> Attribute
+
+Completed case studies:
+
+- [Case Study #001](docs/case-studies/case-study-001-gke-landing-zone.md) - GCP Foundation Platform
+- [Case Study #002](docs/case-studies/case-study-002-finops-budget-guardrails.md) - FinOps Budget Governance
+- [Case Study #003](docs/case-studies/case-study-003-ai-finops-foundation.md) - AI FinOps Data Model
+- [Case Study #004](docs/case-studies/case-study-004-ai-usage-collector-platform.md) - AI Usage Collector Platform
+
+Next planned case study:
+
+- Case Study #005 - AI FinOps Analytics & Executive Dashboard
+
 ## Start Here
 If you are new to the repository, read these in order:
 
@@ -87,6 +104,12 @@ If you are new to the repository, read these in order:
 - [docs/ONBOARDING.md](docs/ONBOARDING.md)
 - [docs/SDLC_AND_GOVERNANCE.md](docs/SDLC_AND_GOVERNANCE.md)
 - [docs/WORKFLOW_CATALOG.md](docs/WORKFLOW_CATALOG.md)
+
+For the AI FinOps track, also review:
+
+- [docs/case-studies/README.md](docs/case-studies/README.md)
+- [docs/architecture/ai-finops/AI_FINOPS_ARCHITECTURE.md](docs/architecture/ai-finops/AI_FINOPS_ARCHITECTURE.md)
+- [docs/architecture/ai-finops/AI_USAGE_COLLECTOR_ARCHITECTURE.md](docs/architecture/ai-finops/AI_USAGE_COLLECTOR_ARCHITECTURE.md)
 
 ## Repository Snapshot
 This repository is organized around documentation, platform foundations, and future implementation work.

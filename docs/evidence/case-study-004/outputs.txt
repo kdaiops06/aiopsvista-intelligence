@@ -1,0 +1,16 @@
+Terraform and deployment outputs captured before teardown:
+
+- project_id = aiopsvista-market-dev
+- ai_finops_dataset_id = ai_finops
+- ai_finops_table_id = ai_usage
+- ai_usage_collector_service_name = ai-usage-collector
+- ai_usage_collector_service_url = [captured in Cloud Run output]
+- ai_usage_collector_service_account_email = ai-usage-collector@aiopsvista-market-dev.iam.gserviceaccount.com
+- ai_usage_collector_artifact_registry_repository_url = us-central1-docker.pkg.dev/aiopsvista-market-dev/ai-usage-collector
+
+Operational values:
+
+- Service image tag: v1
+- Build digest: sha256:19dcfb3f657b616c7195af49f93de5e32754e235666e1998cf269b9f5e04b020
+- Service scaling: min 0, max 1
+- Concurrency: 20

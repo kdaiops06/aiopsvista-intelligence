@@ -163,13 +163,13 @@ Token count and cost data answer "how much?" Metadata — `request_id`, `status`
 
 ---
 
-### 9. Next Phase: Case Study #004 — AI Usage Collector
+### 9. Completed Phase: Case Study #004 — AI Usage Collector Platform
 
-Case Study #003 established the destination. Case Study #004 will establish the pipeline.
+Case Study #003 established the destination. Case Study #004 completed the pipeline.
 
-The AI Usage Collector will ingest real usage events from OpenAI, Gemini, and Claude, normalise them to the `ai_usage` schema, attribute them using `team_name`, `workflow_name`, and `project_id`, and write them to `aiopsvista-market-dev.ai_finops.ai_usage`.
+The AI Usage Collector now ingests AI telemetry events, normalises them to the `ai_usage` schema, attribute them using `team_name`, `workflow_name`, and `project_id`, and writes them to `aiopsvista-market-dev.ai_finops.ai_usage`.
 
-Case Study #003 enables Case Study #004 in the following ways:
+Case Study #003 enabled Case Study #004 in the following ways:
 
 | Case Study #003 Deliverable | Case Study #004 Dependency |
 | --- | --- |
@@ -178,10 +178,12 @@ Case Study #003 enables Case Study #004 in the following ways:
 | `team_name` and `workflow_name` columns | Collector reads attribution context from request metadata or configuration |
 | `status` column | Collector writes outcome status alongside token counts |
 | Terraform-managed dataset and table | Collector deployment references dataset ID through Terraform output |
-| GKE cluster from Case Study #001 | Collector workload runs on the existing private GKE cluster |
-| Workload Identity from Case Study #001 | Collector writes to BigQuery without service account keys |
+| Cloud Run from Case Study #004 | Collector workload runs on the Cloud Run AI Usage Collector service |
+| IAM and service account controls from Case Study #004 | Collector writes to BigQuery without service account keys |
 
-The Case Study #003 schema was deliberately designed with Case Study #004 in mind. Every nullable column that appears unused in Phase 1 is a contract with the next phase of the platform.
+The Case Study #003 schema was deliberately designed with Case Study #004 in mind. Every nullable column that appears unused in Phase 1 became a contract with the next phase of the platform.
+
+The next phase is Case Study #005, which will focus on AI FinOps analytics and executive reporting.
 
 ---
 

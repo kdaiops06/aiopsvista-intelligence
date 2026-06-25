@@ -8,6 +8,8 @@
 
 Case Study #004 introduces a lightweight AI Usage Collector that populates the `ai_finops.ai_usage` BigQuery table established in Case Study #003.
 
+Status: Complete.
+
 This case study does not attempt to solve every provider integration problem at once. It starts with a mock collector that generates sample usage events, normalizes them, and writes them into BigQuery. That decision keeps costs near zero while proving that the platform can support AI FinOps, AI Cost Attribution, AI Observability, AI Reliability Engineering, and Agent Operations.
 
 The strategic value of this case study is simple: it turns the Case Study #003 data model from a static foundation into a usable pipeline.
@@ -257,9 +259,9 @@ Each phase should build on the same schema rather than introducing a new data mo
 
 ---
 
-### 13. Case Study Skeleton
+### 13. Historical Implementation Notes
 
-The next implementation step should include:
+The planning notes below capture the original implementation skeleton and remain useful for future provider expansions:
 
 - Terraform module for the Cloud Run collector,
 - sample payload generator,
@@ -267,6 +269,8 @@ The next implementation step should include:
 - evidence collection output,
 - validation and rollback notes,
 - updated architecture and case study evidence.
+
+Case Study #004 is now complete and superseded by [Case Study #004 - AI Usage Collector Platform](case-study-004-ai-usage-collector-platform.md).
 
 ---
 

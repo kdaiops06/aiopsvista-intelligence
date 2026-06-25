@@ -519,6 +519,29 @@ aiopsvista-market-intelligence/
 		└── tutorials/
 ```
 
+## 6. AI Usage Collector Completion
+
+AiOpsVista now includes a completed AI Usage Collector platform for Enterprise AI FinOps.
+
+### 6.1 Delivered Capability
+
+- Cloud Run AI Usage Collector service
+- Artifact Registry image pipeline
+- Terraform-managed IAM and runtime controls
+- BigQuery `ai_finops.ai_usage` integration
+- Secure-by-default authenticated access
+- Health, readiness, and structured logging controls
+
+### 6.2 Architecture References
+
+- [AI Usage Collector Executive View](../architecture/executive-view.md)
+- [AI Usage Collector Platform Architecture](../architecture/platform-architecture.md)
+- [AI Usage Collector SRE View](../architecture/ai-sre-architecture.md)
+
+### 6.3 Roadmap Position
+
+This capability completes the Collect phase in the AiOpsVista maturity chain and prepares the repository for Case Study #005: AI FinOps Analytics & Executive Dashboard.
+
 ## 6. Deployment Roadmap
 
 ### Phase 1: Landing Zone

@@ -13,6 +13,7 @@ This matrix links business outcomes to architecture, services, observability, an
 | Platform Security Posture | IAM + Workload Identity + Secret Manager | Platform-wide controls | Security scan workflow outputs, audit log monitoring | Credential/security incident runbook (planned under runbooks/) |
 | Deployment Reliability | Branch protection + CI/CD governance | GitHub Actions workflows | Workflow run history, failed check trends | CI/CD failure triage runbook (planned under runbooks/) |
 | AI Reliability Assurance | AI observability stack (Langfuse/OpenLIT) | AI Analyzer + Agent flows | Prompt trace quality, hallucination indicators, cost/latency trends | AI reliability incident runbook (planned under runbooks/) |
+| AI Usage Collection | Cloud Run + Artifact Registry + BigQuery telemetry pipeline | AI Usage Collector | Structured logs, health/readiness endpoints, BigQuery insert outcomes | AI Usage Collector deployment and troubleshooting runbook |
 
 ## Related Documentation
 - docs/ARCHITECTURE.md

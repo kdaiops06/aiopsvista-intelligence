@@ -1,0 +1,41 @@
+BigQuery schema evidence for `aiopsvista-market-dev.ai_finops.ai_usage`:
+
+Dataset:
+
+- `ai_finops`
+
+Table:
+
+- `ai_usage`
+
+Optimization:
+
+- Daily partitioning on `event_timestamp`
+- Clustering by `provider`, `project_id`, `environment`, `team_name`
+
+Columns:
+
+- `event_timestamp` TIMESTAMP REQUIRED
+- `provider` STRING REQUIRED
+- `model` STRING REQUIRED
+- `request_id` STRING NULLABLE
+- `user_id` STRING NULLABLE
+- `project_id` STRING NULLABLE
+- `team_name` STRING NULLABLE
+- `workflow_name` STRING NULLABLE
+- `agent_name` STRING NULLABLE
+- `request_count` INTEGER REQUIRED
+- `input_tokens` INTEGER NULLABLE
+- `output_tokens` INTEGER NULLABLE
+- `total_tokens` INTEGER NULLABLE
+- `estimated_cost` FLOAT64 NULLABLE
+- `latency_ms` INTEGER NULLABLE
+- `status` STRING NULLABLE
+- `environment` STRING REQUIRED
+
+Labels:
+
+- `environment=dev`
+- `platform=aiopsvista`
+- `managed_by=terraform`
+- `cost_center=ai-finops`
