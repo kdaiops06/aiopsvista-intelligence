@@ -108,3 +108,16 @@ resource "google_cloud_run_v2_service_iam_member" "public_invoker" {
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
+
+resource "google_artifact_registry_repository_iam_member" "cloud_build_writer" {
+
+  project    = var.project_id
+  location   = var.region
+  repository = google_artifact_registry_repository.ai_usage_collector.repository_id
+
+  role = "roles/artifactregistry.writer"
+
+  member = "serviceAccount:${var.build_service_account}"
+}
+
+
