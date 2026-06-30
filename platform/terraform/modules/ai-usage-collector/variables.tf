@@ -102,3 +102,9 @@ variable "labels" {
     cost_center = "ai-finops"
   }
 }
+
+variable "build_service_account" {
+  description = "Service account used by Cloud Build to push container images."
+  type        = string
+}
+
